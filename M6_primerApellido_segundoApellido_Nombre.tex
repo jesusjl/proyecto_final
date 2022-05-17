@@ -37,7 +37,11 @@ Our study case illustrates that regular scientific ecological information from c
 
 Located in the North Atlantic Ocean, the Portuguese Archipelago of Selvagens (\ang{30;8;46.68}N \ang{15;51;51.8}W) are the smaller group of islands in the Macaronesian region, 280 kilometres  south of Madeira, and 165 kilometres north of  the Canary Islands. The archipelago includes two major cluster of islands and islets (Selvagem Grande and Selvagem Pequena) where the White-faced Storm-petrel are know to burrow their nests. In July 2019, we conducted a drone survey in the northernmost colony of the two main breeding areas in Selvagem Grande.  Since flights were performed in the daylight, bird activity was minimum and no disturbance from drone was observed.
 
+Burrow nests spots on the orthophoto were systematically digitized as spatial points shapefiles with the assistance of a  vector grid of equal squared cells (QGIS). Following, we compare the manual counted nest dataset with semi-automatic detection using object based image analysis (OBIA) techniques (eCognition Essential). For this purpose, the vector shapefile was split in training and validation sets and respectively used for the image segmentation / classification and accuracy assessment phases.
 
+Similar, an habitat map of the study area was produced using OBIA. The very high resolution mosaic permit to clearly differentiate main land cover classes. For this reason, training data was also 
+
+The habitat map was used to generate landscape metrics. We used R 
 
 \bibliography{bibliography}
 
