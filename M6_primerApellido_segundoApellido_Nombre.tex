@@ -34,14 +34,24 @@ In this study, a drone was used to collect aerial photographs to assess the feas
 Our study case illustrates that regular scientific ecological information from conspicuous burrow-nesting seabirds can be acquired using very high-resolution aerial images and different processing analytical tools, with minimal disturbance and reduced risks to the nests integrity, contributing therefore to the conservation of North Atlantic White-faced Storm-petrel.
 
 \section{Materials and Methods}
-
+\subsection{Study Site}
 Located in the North Atlantic Ocean, the Portuguese Archipelago of Selvagens (\ang{30;8;46.68}N \ang{15;51;51.8}W) are the smaller group of islands in the Macaronesian region, 280 kilometres  south of Madeira, and 165 kilometres north of  the Canary Islands. The archipelago includes two major cluster of islands and islets (Selvagem Grande and Selvagem Pequena) where the White-faced Storm-petrel are know to burrow their nests. In July 2019, we conducted a drone survey in the northernmost colony of the two main breeding areas in Selvagem Grande.  Since flights were performed in the daylight, bird activity was minimum and no disturbance from drone was observed.
+
+\subsection{Aerial survey and post-processing}
+
+The image acquisition plan consisted in a double grid mission (50 meters altitude) using a consumer-grade drone (DJI Mavic 2 pro) equipped with an RGB sensor. The geotagged images were loaded in Pix4DMapper, a software aimed to generate the 3D models, orthophoto and digital terrain model (DTM). Additionally, very low altitude flights were carried out for gathering additional imagery and confirm the presence of nests and  land-cover classes.
+
+\subsection{Nest counting}
 
 Burrow nests spots on the orthophoto were systematically digitized as spatial points shapefiles with the assistance of a  vector grid of equal squared cells (QGIS). Following, we compare the manual counted nest dataset with semi-automatic detection using object based image analysis (OBIA) techniques (eCognition Essential). For this purpose, the vector shapefile was split in training and validation sets and respectively used for the image segmentation / classification and accuracy assessment phases.
 
-Similar, an habitat map of the study area was produced using OBIA. The very high resolution mosaic permit to clearly differentiate main land cover classes. For this reason, training data was also 
+\subsection{Habitat mapping}
 
-The habitat map was used to generate landscape metrics. We used R 
+Similar, an habitat map of the study area was produced using OBIA and machine learning techniques. As the very high resolution mosaic permit to clearly differentiate main land cover classes, training data was collected from the same image. 
+
+\subsection{Landscape metrics}
+
+The classified habitat map was used to generate landscape metrics such as including a variety of area metrics, patch density, size and variability metrics, edge metrics, shape metrics, core area metrics, diversity metrics, and contagion and interspersion metrics. We used \textsf{R} \cite{R_2021} and landscapemetrics package \cite{landscapemetrics_2019} 
 
 \bibliography{bibliography}
 
